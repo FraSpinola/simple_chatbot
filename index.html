@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="style.css">
+      <style>
+         #popup {
+            display: none;
+            position: fixed;
+            bottom: 5.5rem;
+		      left: 7rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            justify-content: center;
+		      align-items: center;
+         }
+         #popup .close-popup {
+            cursor: pointer;
+            color: #aaa;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 1rem;
+		      margin-left: 1rem;
+         }
+         #popup .close-popup:hover,
+         #popup .close-popup:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+         }
+      </style>
+   </head>
+   <body>
+   <div class="main-container">
+         <i class="fa-solid fa-user"></i>
+      </div>
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close">×</span>
+            <div class="chat-container">
+               <div class="chat-messages" id="chatMessages">
+                  <!-- Messaggi del chatbot e dell'utente appariranno qui -->
+                  <div class="bot-message">
+                     I am a cool bot, ready to answer your questions!
+                  </div>
+                  <div class="response-options">
+                     <button class="response-option">Sample question one</button>
+                     <button class="response-option">Sample question one</button>
+                     <button class="response-option">Sample question one</button>
+                  </div>
+               </div>
+               <div class="chat-input">
+                  <input type="text" id="userInput" placeholder="ask me anything...">
+                  <button id="sendButton">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="popup">
+         Try our virtual assistant!
+         <span class="close-popup">&times;</span>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
